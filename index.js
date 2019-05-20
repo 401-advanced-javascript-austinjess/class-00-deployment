@@ -14,10 +14,10 @@ const http = require('http');
  * @param res
  */
 const requestHandler = (req, res) => {
-  // res.setHeader('Content-Type', 'text/html');
-  // res.statusCode = 200;
-  // res.write( pol.isAlive().toString() );
-  // res.end();
+  res.setHeader('Content-Type', 'text/html');
+  res.statusCode = 200;
+  res.write(pol.isAlive().toString());
+  res.end();
 };
 
 const app = http.createServer(requestHandler);
